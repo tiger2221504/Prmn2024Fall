@@ -11,11 +11,19 @@ if uploaded_pdf:
   st.success("PDFを読み込みました")
   time.sleep(3)
   
-  text = """
+  text1 = """
   授業内容を生成してここに表示する！
   生成完了後、手動で編集も可能
   """
-  st.text_area("授業内容(1ページ目)", text, height=300)
+  text2 = """
+  2ページ目以降もこんな感じで表示させる
+  """
+  text3 = """
+  3ページ目
+  """
+  st.text_area("授業内容(1ページ目)", text1, height=300)
+  st.text_area("授業内容(2ページ目)", text2, height=300)
+  st.text_area("授業内容(3ページ目)", text3, height=300)
 
   # 編集後の全テキストを表示
   if st.button("動画作成開始"):
